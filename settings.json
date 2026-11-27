@@ -15,9 +15,7 @@
   "packages": [
     "npm:pi-cache-optimizer@2.10.6",
     "npm:@ff-labs/pi-fff",
-    "git:github.com/xeronsh/pi-gemini-media",
-    "git:github.com/xeronsh/pi-native-web",
-    "git:github.com/xeronsh/pi-native-image"
+    "git:github.com/xeronsh/pi-native-kit"
   ],
   "quietStartup": true,
   "defaultTools": [
