@@ -1,21 +1,19 @@
 {
-  "lastChangelogVersion": "1.5.2",
+  "lastChangelogVersion": "1.6.1",
   "theme": "catppuccin",
   "defaultThinkingLevel": "high",
   "modelThinkingLevels": {
-    "magpie/gemini-4-carbon": "medium"
+    "magpie/mistral/deepseek-v4-1-flash-1017": "high",
+    "magpie/workbuddy/deepseek-v4.1-flash": "high"
   },
   "enabledModels": [
-    "magpie/gemini-4-carbon",
-    "magpie/gemini-3.8-flash",
-    "magpie/deepseek-v4.1-flash",
-    "magpie/gpt-6.1-sol",
-    "magpie/gpt-6.1-terra"
+    "magpie/mistral/deepseek-v4-1-flash-1017",
+    "magpie/workbuddy/deepseek-v4.1-flash"
   ],
   "defaultProvider": "magpie",
-  "defaultModel": "deepseek-v4.1-flash",
+  "defaultModel": "mistral/deepseek-v4-1-flash-1017",
   "packages": [
-    "npm:pi-cache-optimizer@2.10.5",
+    "npm:pi-cache-optimizer@2.10.6",
     "npm:@ff-labs/pi-fff",
     "npm:pi-web-access"
   ],
@@ -27,7 +25,7 @@
     "+ls"
   ],
   "terminal": {
-    "showTerminalProgress": true
+    "showTerminalProgress": false
   },
   "npmCommand": [
     "npm"
@@ -41,7 +39,8 @@
   },
   "cacheWarming": "idle",
   "extensionChangelogVersions": {
-    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0"
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.48.0",
+    "{\"source\":\"npm:pi-cache-optimizer@2.10.6\",\"scope\":\"user\"}": "2.10.6"
   },
   "compaction": {
     "enabled": true,

@@ -1,8 +1,9 @@
 {
   "workflow": "none",
+  "summaryModel": "magpie/mistral/deepseek-v4-1-flash-1017:low",
   "fetch": {
     "answerProvider": "magpie",
-    "answerModel": "deepseek-v4.1-flash"
+    "answerModel": "mistral/deepseek-v4-1-flash-1017"
   },
   "ssrf": {
     "allowRanges": [

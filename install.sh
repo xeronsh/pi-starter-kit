@@ -36,6 +36,10 @@ else
   echo "==> models.json 已存在，跳过覆盖以保护现有配置。"
 fi
 
+if ! command -v agent-browser &> /dev/null; then
+  echo "==> 提示: 未检测到 'agent-browser'，需要浏览器自动化可运行: npm install -g agent-browser"
+fi
+
 echo "==> 触发 pi package 依赖更新与自动拉取..."
 if command -v pi &> /dev/null; then
   pi update || true
