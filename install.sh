@@ -3,7 +3,7 @@ set -e
 
 PI_AGENT_DIR="${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-AGENTS_MD_URL="${AGENTS_MD_URL:-https://raw.githubusercontent.com/0xNorex/agents-skills/main/AGENTS.md}"
+AGENTS_MD_URL="${AGENTS_MD_URL:-https://raw.githubusercontent.com/xeronsh/agents-skills/main/AGENTS.md}"
 
 echo "==> 正在准备目标目录: $PI_AGENT_DIR"
 mkdir -p "$PI_AGENT_DIR" "$PI_AGENT_DIR/secrets"
