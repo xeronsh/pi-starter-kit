@@ -1,5 +1,21 @@
 {
   "providers": {
+    "google-ai-plan": {
+      "modelOverrides": {
+        "gemini-4-neon": {
+          "promptCache": {
+            "short": 55,
+            "long": 55
+          },
+          "cost": {
+            "input": 20,
+            "output": 80,
+            "cacheRead": 0.5,
+            "cacheWrite": 0
+          }
+        }
+      }
+    },
     "custom-provider": {
       "compat": {
         "sendSessionAffinityHeaders": true,
