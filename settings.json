@@ -13,7 +13,6 @@
   "defaultProvider": "magpie",
   "defaultModel": "mistral/deepseek-v4-1-flash-1017",
   "packages": [
-    "npm:pi-cache-optimizer@2.10.6",
     "npm:@ff-labs/pi-fff",
     "git:github.com/xeronsh/pi-native-kit"
   ],
@@ -38,10 +37,6 @@
     "inlineBudget": 6000
   },
   "cacheWarming": "idle",
-  "extensionChangelogVersions": {
-    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.48.0",
-    "{\"source\":\"npm:pi-cache-optimizer@2.10.6\",\"scope\":\"user\"}": "2.10.6"
-  },
   "compaction": {
     "enabled": true,
     "reserveTokens": 80000
