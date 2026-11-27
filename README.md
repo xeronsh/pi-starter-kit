@@ -4,10 +4,10 @@ Lean, cache-first configuration for [Pi Coding Agent](https://github.com/earendi
 
 ## Architecture
 
-- **Append-Only Cache**: `codemode: "only"` + `pi-cache-optimizer` + `cacheWarming: "idle"` keeps prompt prefixes intact for 95% cache discounts.
-- **Zero-Bloat Search**: `pi-fff` in `override` mode replaces built-in `grep`/`find`; `pi-web-access` runs raw (`workflow: "none"`) so search results stay out of the cached prompt prefix.
-- **Shared Rules & Skills**: `AGENTS.md` tracks [`xeronsh/agents-skills`](https://github.com/xeronsh/agents-skills) and skills live there too, so both starter kits share one source of truth. `install.sh` fetches it at install time and falls back to the bundled copy.
-- **Zero-MCP Browser Automation**: Replaces `chrome-devtools-mcp` with the [`agent-browser`](https://github.com/vercel-labs/agent-browser) CLI + thin stub skill (`0` background MCP processes, compact `@eN` accessibility snapshots).
+- **Append-Only Cache**: `codemode: "only"` + `pi-cache-optimizer` + `cacheWarming: "idle"` keeps prompt prefixes intact for maximum cache discounts.
+- **Zero-Bloat Search & Media**: `pi-fff` (`override` mode) replaces built-in `grep`/`find`; `pi-native-web`, `pi-native-image`, and `pi-gemini-media` reuse your existing Pi OAuth logins (`google-ai-plan` & `openai-codex`) with zero third-party API keys.
+- **Shared Rules & Skills**: `AGENTS.md` tracks [`xeronsh/agents-skills`](https://github.com/xeronsh/agents-skills) and skills live there too. `install.sh` fetches it at install time and falls back to the bundled copy.
+- **Zero-MCP Browser Automation**: Replaces `chrome-devtools-mcp` with [`agent-browser`](https://github.com/vercel-labs/agent-browser) CLI + thin stub skill (`0` background MCP processes).
 
 ## Quick Start
 
@@ -20,9 +20,10 @@ git clone https://github.com/xeronsh/pi-starter-kit.git ~/.pi-starter-kit
 cd ~/.pi-starter-kit && ./install.sh
 ```
 
-## Included Packages (4 Core)
+## Included Packages (5 Lean Core)
 
 - `pi-cache-optimizer` - Prompt prefix stability & cache telemetry
-- `pi-web-access` - Web search, URL/GitHub/PDF fetching
 - `@ff-labs/pi-fff` - SIMD fuzzy file & content search (`override` mode)
-- `pi-gemini-media` - Native video (frames + audio), audio, and PDF perception for Gemini (`google-ai-plan`, Gemini API, Vertex AI)
+- `pi-native-web` - Native `web_search` & `fetch_url` via Gemini (`google-ai-plan`) & Codex (`openai-codex`) logins
+- `pi-native-image` - Native `generate_image` via Codex (`openai-codex`) login
+- `pi-gemini-media` - Native `read_media` (video frames+audio, audio, PDF) via Gemini

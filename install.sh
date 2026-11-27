@@ -24,11 +24,6 @@ else
   echo "    上游不可达，使用仓库内置副本"
 fi
 
-if [ ! -f "$PI_AGENT_DIR/web-search.json" ]; then
-  echo "==> 初始化 web-search.json..."
-  cp "$SCRIPT_DIR/web-search.json" "$PI_AGENT_DIR/web-search.json"
-fi
-
 if [ ! -f "$PI_AGENT_DIR/models.json" ]; then
   echo "==> 初始化 models.json (请后续按需配置 API Key)..."
   cp "$SCRIPT_DIR/models.json.example" "$PI_AGENT_DIR/models.json"
