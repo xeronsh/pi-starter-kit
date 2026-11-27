@@ -39,6 +39,26 @@
   "cacheWarming": "idle",
   "compaction": {
     "enabled": true,
-    "reserveTokens": 80000
+    "reserveTokens": 80000,
+    "modelOverrides": {
+      "google-ai-plan/gemini-4-neon": {
+        "reserveTokens": 548576
+      },
+      "google-ai-plan/gemini-4-carbon": {
+        "reserveTokens": 548576
+      },
+      "google-ai-plan/gemini-4-hydrogen": {
+        "reserveTokens": 548576
+      },
+      "google-ai-plan/gemini-3.5-flash-lite": {
+        "reserveTokens": 548576
+      },
+      "magpie/mistral/deepseek-v4-1-flash-1017": {
+        "reserveTokens": 548576
+      },
+      "magpie/workbuddy/deepseek-v4.1-flash": {
+        "reserveTokens": 500000
+      }
+    }
   }
 }
