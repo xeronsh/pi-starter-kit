@@ -12,7 +12,6 @@ echo "==> 复制核心配置文件..."
 cp --remove-destination "$SCRIPT_DIR/settings.json" "$PI_AGENT_DIR/settings.json"
 cp --remove-destination "$SCRIPT_DIR/mcp.json" "$PI_AGENT_DIR/mcp.json"
 cp --remove-destination "$SCRIPT_DIR/keybindings.json" "$PI_AGENT_DIR/keybindings.json"
-cp --remove-destination "$SCRIPT_DIR/pi-fff.json" "$PI_AGENT_DIR/pi-fff.json"
 
 echo "==> 安装 AGENTS.md（优先上游 agents-skills，失败回退内置副本）"
 if curl -fsSL --max-time 15 "$AGENTS_MD_URL" -o "$PI_AGENT_DIR/AGENTS.md.tmp" 2>/dev/null && [ -s "$PI_AGENT_DIR/AGENTS.md.tmp" ]; then

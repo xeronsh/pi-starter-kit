@@ -13,7 +13,6 @@
   "defaultProvider": "magpie",
   "defaultModel": "mistral/deepseek-v4-1-flash-1017",
   "packages": [
-    "npm:@ff-labs/pi-fff",
     "git:github.com/xeronsh/pi-native-kit"
   ],
   "quietStartup": true,
